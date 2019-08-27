@@ -22,6 +22,8 @@
     <!--包含子模块-->
     <modules>
         <module>Server</module>
+        <module>Client1</module>
+        <module>Client2</module>
     </modules>
 
     <!--在父模块添加web依赖，子模块可继承该依赖-->
