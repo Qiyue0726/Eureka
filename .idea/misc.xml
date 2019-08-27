@@ -19,6 +19,7 @@
         <option value="$PROJECT_DIR$/Client1/pom.xml" />
         <option value="$PROJECT_DIR$/Client2/pom.xml" />
         <option value="$PROJECT_DIR$/Ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/Feign/pom.xml" />
       </list>
     </option>
   </component>

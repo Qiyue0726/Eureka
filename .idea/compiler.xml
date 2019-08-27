@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Client1" />
         <module name="Client2" />
+        <module name="Feign" />
         <module name="Ribbon" />
         <module name="Server" />
       </profile>
