@@ -8,12 +8,11 @@ spring:
 eureka:
   instance:
     hostname: localhost
-    #以IP地址注册到服务中心，相互注册使用IP地址
+    #浠P鍦板潃娉ㄥ唽鍒版湇鍔′腑蹇冿紝鐩镐簰娉ㄥ唽浣跨敤IP鍦板潃
   #    prefer-ip-address: true
 
   client:
     service-url:
-      #服务注册地址
+      #鏈嶅姟娉ㄥ唽鍦板潃
       defaultZone: http://${eureka.instance.hostname}:8080/eureka
-
 

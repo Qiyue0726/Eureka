@@ -14,13 +14,14 @@ public class RibbonApplication {
     public static void main(String[] args) {
         SpringApplication.run(RibbonApplication.class, args);
     }
+
     /**
      * 负载均衡配置
      * @return
      */
     @Bean
     @LoadBalanced
-    RestTemplate restTemplate(){
-        return new RestTemplate();
+    public RestTemplate restTemplate(){
+        return  new RestTemplate();
     }
 }
