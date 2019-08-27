@@ -1,0 +1,28 @@
+# Eureka 服务注册与发现的组件
+server:
+  port: 8080
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  instance:
+    hostname: localhost
+    #将prefer-ip-address设为开启时，将默认显示服务的地址，而非主机名
+#    prefer-ip-address: true  #以IP地址注册到服务中心，相互注册使用IP地址
+#    prefer-ip: 127.0.0.1   #显式设置服务的地址
+
+  client:
+    # 下面两个 false 表明自己是 server，而非 client
+    register-with-eureka: false     # 不要使用 eureka 服务进行注册，即在管理界面不可见
+    fetch-registry: false           # 不要在本地缓存注册表信息
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#      defaultZone: http://127.0.0.1:${server.port}/eureka/
+
+  server:
+    #开启自我保护模式
+    enable-self-preservation: false
+    #清理无效节点,默认60*1000毫秒,即60秒
+    eviction-interval-timer-in-ms: 5000
